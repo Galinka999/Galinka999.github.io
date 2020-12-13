@@ -30,9 +30,6 @@ body {
 .portfolio-left {
     background:rgb(72, 7, 83);
     width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 90px 0 0 90px;
 }
 
@@ -45,11 +42,12 @@ body {
 }
 
 .portfolio-left-center {
-    width: 85%;
+    width: 100%;
     text-align: center;
     color: white;
-    padding: 65px;
+    padding: 50px;
     text-shadow: -8px -2px 7px black;
+    box-sizing: border-box;
 }
 
 .user-foto {
@@ -66,10 +64,12 @@ body {
     border-bottom: 3px solid rgb(161, 160, 160);
     color: rgb(44, 43, 43);
     display: flex;
+    flex-wrap: wrap;
 }
 
 .portfolio-right-blok {
     margin: 50px 0;
+    opacity: 0;
 }
 
 h1 {
@@ -108,11 +108,14 @@ a {
 
 .portfolio-right-footer {
     display: flex;
-    margin-top: 70px;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
 }
 
 .button {
+    margin: 20px;
     font-size: 16px;
     padding: 25px 25px;
     background: rgb(154 83 166);
@@ -124,10 +127,15 @@ a {
 }
 
 .social {
+    margin: 60px 30px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: left;
     align-items: center;
+}
 
+.social > div {
+    width: 75px;
+    height: 75px;
 }
 
 .user-foto2 {
@@ -135,7 +143,13 @@ a {
     height: 60px;
     border-radius: 50%;
     box-shadow: -6px -2px 13px black;
-    margin-left: 20px;
     cursor: pointer;
-    
+    transform-origin: bottom;
+    transform: scale(0.9);
+}
+
+.user-foto2:hover {
+    width: 75px;
+    height: 75px;
+    transform: scale(1);
 }
